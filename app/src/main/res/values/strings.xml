@@ -16,4 +16,6 @@
     <string name="gallery">Gallery</string>
     <string name="wishlist">Wish List</string>
     <string name="emagazine">E-Magazine</string>
+    <string name="search">Search</string>
+    <string name="by">By</string>
 </resources>

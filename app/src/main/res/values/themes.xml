@@ -14,10 +14,15 @@
         <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
         <item name="background">@color/white</item>
         <item name="android:windowBackground">@color/white</item>
-        <item name="android:autofilledHighlight" tools:targetApi="o">@android:color/transparent
-        </item>
+
         <item name="android:textSize">@dimen/text_size_medium</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="MyAlertDialogTheme" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColor">@color/colorDarkText</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorAccent">@color/black</item>
     </style>
 </resources>
