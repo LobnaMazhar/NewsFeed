@@ -103,10 +103,9 @@ object IntentClass {
 
     }
 
-    fun goToLink(context: Context, link: String) {
-        if (link.isNotBlank()) {
-            val uri = Uri.parse(link)
-            val intent = Intent(Intent.ACTION_VIEW, uri)
+    fun goToLink(context: Context, link: String?) {
+        if (!link.isNullOrBlank()) {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
             context.startActivity(intent)
         }
     }

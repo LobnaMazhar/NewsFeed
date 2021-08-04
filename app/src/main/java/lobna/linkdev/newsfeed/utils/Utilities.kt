@@ -135,15 +135,17 @@ object Utilities {
         }
     }
 
-    fun formatDate(dateStr: String): String {
-        val inputDateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
-        val outputDateFormat = SimpleDateFormat("MMMM d, yyyy", Locale.getDefault())
-        return try {
-            val date = inputDateFormat.parse(dateStr)
-            outputDateFormat.format(date ?: Date())
-        } catch (e: Exception) {
-            e.printStackTrace()
-            ""
-        }
+    fun formatDate(dateStr: String?): String {
+        dateStr?.run {
+            val inputDateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
+            val outputDateFormat = SimpleDateFormat("MMMM d, yyyy", Locale.getDefault())
+            return try {
+                val date = inputDateFormat.parse(dateStr)
+                outputDateFormat.format(date ?: Date())
+            } catch (e: Exception) {
+                e.printStackTrace()
+                ""
+            }
+        } ?: return ""
     }
 }

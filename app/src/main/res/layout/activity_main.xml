@@ -7,7 +7,7 @@
 
         <variable
             name="mvm"
-            type="lobna.linkdev.newsfeed.ui.MainViewModel" />
+            type="lobna.linkdev.newsfeed.ui.main.MainViewModel" />
     </data>
 
     <androidx.drawerlayout.widget.DrawerLayout

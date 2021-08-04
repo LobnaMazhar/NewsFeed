@@ -1,4 +1,4 @@
-package lobna.linkdev.newsfeed.ui
+package lobna.linkdev.newsfeed.ui.main
 
 import android.app.Application
 import android.content.Context
@@ -16,6 +16,7 @@ import lobna.linkdev.newsfeed.data.ArticleResponse
 import lobna.linkdev.newsfeed.data.NewsFeedResponse
 import lobna.linkdev.newsfeed.network.NewsFeedApiInterface
 import lobna.linkdev.newsfeed.repository.MainRepository
+import lobna.linkdev.newsfeed.ui.details.DetailsActivity
 import lobna.linkdev.newsfeed.utils.IntentClass
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
@@ -26,7 +27,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         override fun onItemClick(context: Context, item: ArticleModel) {
             val bundle = Bundle()
             bundle.putParcelable("data", item)
-            IntentClass.goToActivity(context, MainActivity::class.java, bundle)
+            IntentClass.goToActivity(context, DetailsActivity::class.java, bundle)
         }
     })
 

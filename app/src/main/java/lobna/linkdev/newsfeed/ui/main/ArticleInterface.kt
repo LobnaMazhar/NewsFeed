@@ -1,4 +1,4 @@
-package lobna.linkdev.newsfeed.ui
+package lobna.linkdev.newsfeed.ui.main
 
 import android.content.Context
 import lobna.linkdev.newsfeed.data.ArticleModel
