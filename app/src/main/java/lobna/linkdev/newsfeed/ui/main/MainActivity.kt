@@ -5,6 +5,7 @@ import android.view.Menu
 import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import lobna.linkdev.newsfeed.R
 import lobna.linkdev.newsfeed.databinding.ActivityMainBinding
 import lobna.linkdev.newsfeed.utils.Utilities.showToast
@@ -34,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         toggle.isDrawerIndicatorEnabled = true
         toggle.syncState()
 
+        activityMainBinding.navView.menu.getItem(0).isChecked = true
         activityMainBinding.navView.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.nav_explore ->
@@ -47,6 +49,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_emagazine ->
                     showToast(getString(R.string.emagazine))
             }
+            activityMainBinding.drawerLayout.closeDrawer(GravityCompat.START)
             true
         }
     }

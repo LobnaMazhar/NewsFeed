@@ -32,6 +32,7 @@
             android:background="@color/white"
             android:fitsSystemWindows="true"
             app:headerLayout="@layout/nav_header_main"
+            app:itemBackground="@drawable/drawer_menu_selector"
             app:itemIconTint="@color/colorDarkText"
             app:itemTextColor="@color/colorDarkText"
             app:menu="@menu/activity_main_drawer" />
